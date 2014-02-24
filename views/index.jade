@@ -3,18 +3,34 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  .puppy
-    img(src='images/1.jpg' width=180)
-    .buttons
-      .input-group
-        .input-group-addon $
-        input.form-control.donate
-      button.btn.btn-default(type="button") test
-  .puppy
-    img(src='images/2.jpg' width=180)
-  .puppy
-    img(src='images/3.jpg' width=180)
-  .puppy
-    img(src='images/4.jpg' width=180)
-  .puppy
-    img(src='images/5.jpg' width=180)
+
+  .match.container
+    .row
+      .col-lg-4
+        .puppy
+          img(src='images/1.jpg' width=180)
+        .buttons
+          form(method="post")
+            .form-group
+              .input-group
+                label(for='donate').sr-only amount to donate
+                .input-group-addon $
+                input(name="donate").form-control.donate
+              button(type="button").btn.btn-default Donate!
+
+      .col-lg-2
+        h1 VS
+
+      .col-lg-4
+        .puppy
+          img(src='images/2.jpg' width=180)
+        .buttons
+          form
+            .form-group
+              .input-group
+                label(for='donate').sr-only amount to donate
+                .input-group-addon $
+                input(name="donate").form-control.donate
+              button(type="button").btn.btn-default Donate!
+
+
