@@ -4,33 +4,40 @@ block content
   h1= title
   p Welcome to #{title}
 
+  each match in bracket.matches
+    p hello #{match.dog1}
+    p hello #{match.dog2}
+
   .match.container
     .row
-      .col-lg-4
-        .puppy
-          img(src='images/1.jpg' width=180)
-        .buttons
-          form(method="post")
-            .form-group
-              .input-group
-                label(for='donate').sr-only amount to donate
-                .input-group-addon $
-                input(name="donate").form-control.donate
-              button(type="button").btn.btn-default Donate!
+      each match in bracket.matches
 
-      .col-lg-2
-        h1 VS
+        .col-lg-4
+          h2= match.dog1
+          .puppy
+            img(src="#{match.dog1_image}" width=180)
+          .buttons
+            form(method="post")
+              .form-group
+                .input-group
+                  label(for='donate').sr-only amount to donate
+                  .input-group-addon $
+                  input(name="donate").form-control.donate
+                button(type="button").btn.btn-default Donate!
 
-      .col-lg-4
-        .puppy
-          img(src='images/2.jpg' width=180)
-        .buttons
-          form
-            .form-group
-              .input-group
-                label(for='donate').sr-only amount to donate
-                .input-group-addon $
-                input(name="donate").form-control.donate
-              button(type="button").btn.btn-default Donate!
+        .col-lg-2
+          h1 VS
+
+        .col-lg-4
+          .puppy
+            img(src='images/2.jpg' width=180)
+          .buttons
+            form
+              .form-group
+                .input-group
+                  label(for='donate').sr-only amount to donate
+                  .input-group-addon $
+                  input(name="donate").form-control.donate
+                button(type="button").btn.btn-default Donate!
 
 

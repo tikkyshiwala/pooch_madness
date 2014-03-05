@@ -4,5 +4,9 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: res.app.get('appName') });
+  var Bracket = require('../models/bracket');
+  res.render('index', {
+    title: res.app.get('appName'),
+    bracket: Bracket.get()
+  });
 };
