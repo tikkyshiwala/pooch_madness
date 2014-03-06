@@ -20,14 +20,18 @@ block content
           .puppy
             img(src=match.dog1.image width=180)
           .buttons
-            form(method="post")
-              .form-group
-                input(name="id" type="hidden" value=match.dog1.id)
-                .input-group
-                  label(for='donate').sr-only amount to donate
-                  .input-group-addon $
-                  input(name="donate").form-control.donate
-                button(type="button").btn.btn-default Donate!
+            if name
+              form(method="post")
+                .form-group
+                  input(name="id" type="hidden" value=match.dog1.id)
+                  .input-group
+                    label(for='donate').sr-only amount to donate
+                    .input-group-addon $
+                    input(name="donate").form-control.donate
+                  button(type="button").btn.btn-default Donate!
+            else 
+              a(href='/signup') Sign up to donate
+              
 
         .col-lg-2
           h1 VS
@@ -37,13 +41,16 @@ block content
           .puppy
             img(src=match.dog2.image width=180)
           .buttons
-            form
-              .form-group
-                input(name="id" type="hidden" value=match.dog2.id)
-                .input-group
-                  label(for='donate').sr-only amount to donate
-                  .input-group-addon $
-                  input(name="donate").form-control.donate
-                button(type="button").btn.btn-default Donate!
+            if name
+              form
+                .form-group
+                  input(name="id" type="hidden" value=match.dog2.id)
+                  .input-group
+                    label(for='donate').sr-only amount to donate
+                    .input-group-addon $
+                    input(name="donate").form-control.donate
+                  button(type="button").btn.btn-default Donate!
+            else 
+              a(href='/signup') Sign up to donate
 
 

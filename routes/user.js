@@ -25,5 +25,4 @@ exports.create = function(req, res){
     res.cookie('name', name);
     res.redirect('/');
   }
-
 }

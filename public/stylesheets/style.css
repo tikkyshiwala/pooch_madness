@@ -16,3 +16,6 @@ a {
 .match .row:nth-child(2n) {
   background-color: #ddd;
 }
+.match .buttons {
+  margin-bottom: 1em;
+}
