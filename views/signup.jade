@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Sign up to donate
+
+  .match.container
+    .row
+      .col-lg-4 
+          form(method="post")
+            .form-group
+              if (error)
+                .error=error
+              .input-group
+                label(for='name').sr-only Your Name
+                input(name='name').form-control.name
+              button(type='submit').btn.btn-default Signup
