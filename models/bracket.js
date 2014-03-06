@@ -3,9 +3,7 @@ var Pooch = require('./pooch');
 var currentRound = 1;
 
 var data = {
-  round_1 : {
-    matches: [ {dog1: 'brownie', dog1_image: 'images/1.jpg' , dog2: 'fluffy'} ]
-  }
+  round_1: buildFirstRound()
 };
 
 exports.get = function() {
@@ -17,10 +15,29 @@ exports.endRound = function() {
   currentRound++;
 };
 
+function buildFirstRound() {
+  dog_list = Pooch.all();
+  matches = [];
+
+  for (var i=0;i < dog_list.length; i += 2) {
+    matches.push({
+     dog1: dog_list[i],
+     dog2: dog_list[i+1]
+   });
+  }
+
+  return { matches: matches };
+}
+
+
 function buildNextRound() {
   var nextRound = currentRound + 1;
 
   var currentMatches = exports.get();
+  console.log(currentMatches);
 
+  for(match in currentMatches) {
+
+  }
 
 }

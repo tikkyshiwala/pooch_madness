@@ -12,21 +12,17 @@ block content
     p
       a(href='/signup') Sign up
 
-  each match in bracket.matches
-    p hello #{match.dog1}
-    p hello #{match.dog2}
-
   .match.container
-    .row
-      each match in bracket.matches
-
+    each match in bracket.matches
+      .row
         .col-lg-4
-          h2= match.dog1
+          h2= match.dog1.name
           .puppy
-            img(src="#{match.dog1_image}" width=180)
+            img(src=match.dog1.image width=180)
           .buttons
             form(method="post")
               .form-group
+                input(name="id" type="hidden" value=match.dog1.id)
                 .input-group
                   label(for='donate').sr-only amount to donate
                   .input-group-addon $
@@ -37,11 +33,13 @@ block content
           h1 VS
 
         .col-lg-4
+          h2= match.dog2.name
           .puppy
-            img(src='images/2.jpg' width=180)
+            img(src=match.dog2.image width=180)
           .buttons
             form
               .form-group
+                input(name="id" type="hidden" value=match.dog2.id)
                 .input-group
                   label(for='donate').sr-only amount to donate
                   .input-group-addon $

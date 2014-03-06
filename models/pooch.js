@@ -1,7 +1,229 @@
 pooches = [];
+
 pooches.push({
   id: 1,
-  name: 'Brownie',
-  image: '/images/brownie.jpg',
+  name: 'Alexandria',
+  image: '/images/alexandria.jpg',
   donations: []
 });
+
+pooches.push({
+  id: 2,
+  name: 'Angel',
+  image: '/images/angel.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 3,
+  name: 'Annie',
+  image: '/images/annie.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 4,
+  name: 'Autumn',
+  image: '/images/autumn.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 5,
+  name: 'Bella',
+  image: '/images/bella.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 6,
+  name: 'Bess',
+  image: '/images/bess.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 7,
+  name: 'Blanche',
+  image: '/images/blanche.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 8,
+  name: 'Casey',
+  image: '/images/casey.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 9,
+  name: 'Chessie',
+  image: '/images/chessie.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 10,
+  name: 'Ella',
+  image: '/images/ella.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 11,
+  name: 'Elza_and_norris',
+  image: '/images/elza_and_norris.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 12,
+  name: 'Faithful',
+  image: '/images/faithful.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 13,
+  name: 'Halemma',
+  image: '/images/halemma.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 14,
+  name: 'Hopely',
+  image: '/images/hopely.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 15,
+  name: 'Kai',
+  image: '/images/kai.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 16,
+  name: 'Lilah',
+  image: '/images/lilah.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 17,
+  name: 'Lina',
+  image: '/images/lina.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 18,
+  name: 'Millie',
+  image: '/images/millie.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 19,
+  name: 'Olivian',
+  image: '/images/olivian.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 20,
+  name: 'Oreo',
+  image: '/images/oreo.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 21,
+  name: 'Paisley',
+  image: '/images/paisley.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 22,
+  name: 'Pam',
+  image: '/images/pam.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 23,
+  name: 'Peppa',
+  image: '/images/peppa.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 24,
+  name: 'Pritchett',
+  image: '/images/pritchett.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 25,
+  name: 'Sage',
+  image: '/images/sage.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 26,
+  name: 'Shayla',
+  image: '/images/shayla.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 27,
+  name: 'Sky',
+  image: '/images/sky.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 28,
+  name: 'Teal',
+  image: '/images/teal.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 29,
+  name: 'Tessie',
+  image: '/images/tessie.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 30,
+  name: 'Tica',
+  image: '/images/tica.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 31,
+  name: 'Tinkerbell',
+  image: '/images/tinkerbell.jpg',
+  donations: []
+});
+
+pooches.push({
+  id: 32,
+  name: 'Trinity',
+  image: '/images/trinity.jpg',
+  donations: []
+});
+
+exports.all = function() {
+  return pooches;
+};

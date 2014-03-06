@@ -8,7 +8,7 @@ exports.index = function(req, res){
   name = req.cookies.name
   res.render('index', {
     title: res.app.get('appName'),
-    bracket: Bracket.get()
+    bracket: Bracket.get(),
     name: name
   });
 };
