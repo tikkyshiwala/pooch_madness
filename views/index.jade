@@ -4,6 +4,14 @@ block content
   h1= title
   p Welcome to #{title}
 
+  if name
+    p Hi #{name}
+    p
+      a(href='/signout') Sign out
+  else
+    p
+      a(href='/signup') Sign up
+
   each match in bracket.matches
     p hello #{match.dog1}
     p hello #{match.dog2}
