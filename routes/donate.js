@@ -1,3 +1,10 @@
+var Pooch = require('../models/pooch');
+
 exports.donate = function(req, res){
-  res.render('donation_thanks');
+  var dogId = req.body.id;
+  var amount = req.body.amount;
+
+  Pooch.incrementDonation(dogId, amount);
+
+  res.redirect('/');
 };
