@@ -19,3 +19,6 @@ a {
 .match .buttons {
   margin-bottom: 1em;
 }
+.error {
+  color: #d44950;
+}

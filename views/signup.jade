@@ -1,16 +1,37 @@
 extends layout
 
 block content
-  h1 Sign up to donate
 
   .match.container
+    h1 Sign up or sign in to donate
     .row
-      .col-lg-4 
-          form(method="post")
+      .col-lg-6
+        form(method="post" action="/signup")
+          h2 You new here?
+          h4 Sign up!
+          .form-group
+            .input-group
+              label(for='name') Your Name
+              input(name='name').form-control.name
+              if (signup && signup.error && signup.error.name)
+                .error=signup.error.name
+            .input-group
+              label(for='password') Your (not so) Secret Passord
+              input(name='password' type='password').form-control.password
+              if (signup && signup.error && signup.error.password)
+                .error=signup.error.password
+            button(type='submit').btn.btn-default Sign Up
+      .col-lg-6
+          form(method="post" action="/signin")
+            h2 Already a member?
+            h4 Sign in!
             .form-group
-              if (error)
-                .error=error
+              if (signin && signin.error)
+                .error=signin.error
               .input-group
-                label(for='name').sr-only Your Name
+                label(for='name') Your Name
                 input(name='name').form-control.name
-              button(type='submit').btn.btn-default Signup
+              .input-group
+                label(for='password') Your (not so) Secret Passord
+                input(name='password' type='password').form-control.password
+              button(type='submit').btn.btn-default Sign In

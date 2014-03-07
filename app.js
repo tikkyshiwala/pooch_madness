@@ -40,10 +40,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 app.post('/donate', donate.donate);
 app.get('/signup', user.signup);
 app.post('/signup', user.create);
+app.post('/signin', user.signin);
 app.get('/signout', user.signout);
 
 http.createServer(app).listen(app.get('port'), function(){
