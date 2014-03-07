@@ -59,4 +59,3 @@ exports.login = function (name, password) {
   return { error: 'login failed' };
 };
 
-exports.create('john','john');

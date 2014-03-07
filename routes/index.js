@@ -1,9 +1,8 @@
 User = require('../models/user.js');
+var Bracket = require('../models/bracket');
 
 exports.index = function(req, res){
-  var Bracket = require('../models/bracket');
   user_id = req.cookies.user_id;
-
   name = false
   if(user_id){
     user = User.find(user_id)
@@ -18,3 +17,9 @@ exports.index = function(req, res){
     name: name
   });
 };
+
+exports.nextRound = function(req, res) {
+  Bracket.buildNextRound();
+  console.log(JSON.stringify(Bracket.get()));
+  res.redirect('/');
+}
