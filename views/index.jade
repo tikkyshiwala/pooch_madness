@@ -3,3 +3,23 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  .match.container
+    .row
+      .col-lg-4
+        if name
+          p 
+            Hi #{name}
+            a.btn.btn-lg.btn-primary(href='/signout') Sign out
+        else
+          p
+            a.btn.btn-lg.btn-primary(href='/signup') Sign up
+
+    .row
+      each dog in dogs
+        .col-lg-4
+          h2= dog.name
+          .puppy
+            img(src=dog.image width=180)
+
+

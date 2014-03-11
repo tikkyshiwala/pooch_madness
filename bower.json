@@ -1,0 +1,20 @@
+{
+  "name": "pooch_madness",
+  "version": "0.1",
+  "authors": [
+    "John Brosnan <jbrosnan@constantcontact.com>"
+  ],
+  "description": "vote for cute dogs",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : { 
+    "jquery" : "2.1.0",
+    "bootstrap" : "3.0.0" 
+  }
+}
