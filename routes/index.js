@@ -1,5 +1,5 @@
 User = require('../models/user.js');
-var Bracket = require('../models/bracket');
+Pooch = require('../models/pooch.js');
 
 exports.index = function(req, res){
   user_id = req.cookies.user_id;
